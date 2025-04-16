@@ -1,4 +1,5 @@
-export default async function handler(req) {
+export default async function handler(req, res) 
+{
   try {
     const body = await req.json();
     const prompt = body.prompt;

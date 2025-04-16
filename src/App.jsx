@@ -30,7 +30,7 @@ function App() {
         placeholder="Type your question here..."
       />
       <button onClick={askChatGPT} style={{ marginTop: "1rem" }}>
-        Ask ChatGPT v0.0.1
+        Ask ChatGPT v0.0.2
       </button>
       {loading && <p>Thinking...</p>}
       {response && (
