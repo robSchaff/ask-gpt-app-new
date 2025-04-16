@@ -35,6 +35,12 @@ export default async function handler(req) {
 
   } catch (err) {
     console.error("Error in /api/chat:", err);
-    return new Response("A server error occurred", { status: 500 });
+  
+    return new Response(JSON.stringify({
+      error: "An error occurred while processing your request."
+    }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" }
+    });
   }
 }
